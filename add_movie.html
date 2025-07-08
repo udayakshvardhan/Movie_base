@@ -1,0 +1,30 @@
+{% extends "movies.html" %}
+
+ {% block style %}
+ <style>
+    p{
+        text-align: center;
+        padding-top: 7%;
+    }
+    a{
+        position: absolute;
+        padding: 7% 50%;
+    }
+    div{
+        box-shadow: 0px 0px 20px 1px rgb(0, 247, 255);
+    }
+ </style>
+ {% endblock %}
+
+ {%block body%}
+
+ <h2 class="text-center text-light p-5"> <b>SEARCH MOVIE BY MOVIE NAME </b></h2>
+
+<form action="/select_movie" method="post">
+<div class="col-4 mx-auto mt-5 text-center rounded" style="background-color:blac;"> 
+    <p class="text-light"><b>{{ form.movie_name.label }} <br> </b> <br> {{ form.movie_name(size=20) }}</p>
+
+    <input type="submit" value="ADD MOVIE" class="btn btn-md btn-outline-success mx-auto p-2 m-5">
+    </div>
+</form>
+{% endblock %}

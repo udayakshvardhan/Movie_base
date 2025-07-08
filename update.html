@@ -1,0 +1,33 @@
+{% extends "movies.html" %}
+
+{% block style %}
+<style>
+    p{
+        padding-top: 5%;
+        padding-bottom: 5%;
+
+    }
+    div{
+        padding: 5% 7%;
+        margin: 5% 35%;
+        box-shadow: 0px 0px 20px 2px rgb(69, 157, 246);
+    }
+
+</style>
+{% block body %}  
+{% endblock %}
+<body class="bg-light">
+
+<form action="/update_movie/{{title}}" method="POST">
+    {{form.csrf_token}}
+<div class="col-lg-4 bg-dar rounded text-center" >
+<p class="text-center text-ligh"> <b> {{title}} </b> </p>
+ <p class="text-center text-ligh"> <b>{{form.rating.label}}</b> <br> {{form.rating }} </p>
+ <p class="text-center text-ligh"> <b>{{form.review.label}}</b> <br> {{form.review }} </p>
+ <input type="submit" value="CONFIRM" class="ps-4 pe-4  btn  btn-sm btn-primary">
+ </div>
+</form>
+
+</body>
+
+{% endblock %}

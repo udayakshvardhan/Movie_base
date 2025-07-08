@@ -1,0 +1,16 @@
+{% extends "movies.html" %}
+{% block style %} 
+<style>
+a:hover{
+    color:red;
+}
+</style>
+  {% endblock %}
+{% block body %}  
+ {% for movie in movies %}
+ <a
+  href="add_to_database/{{movie['title']}}/{{movie['date']}}/{{movie['id']}}/{{movie['image_url']}}/{{movie['des']}}"> {{movie['title']}}- {{movie['date']}}  <br>  </a>
+ <br>
+ {% endfor %}
+
+{% endblock %}
