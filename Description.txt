@@ -1,0 +1,112 @@
+🧠 Abstract:
+This project is a dynamic and user-friendly movie review platform built using the Flask framework. It enables users to search movies via The Movie Database (TMDB) API, add them to a personal watchlist, and record reviews and ratings. The application uses SQLite for local data storage, Flask-SQLAlchemy for ORM-based database interaction, and Flask-WTF for secure form handling. The UI is styled using Bootstrap to ensure responsiveness and ease of use.
+
+🎯 Objective:
+To design a lightweight, full-stack web application that allows users to:
+
+Search for movies using real-time external API.
+
+Add selected movies to a local database.
+
+Write and store personal reviews and ratings.
+
+Update or delete existing reviews.
+
+Visualize all entries in an organized UI.
+
+🔧 Technology Stack:
+Layer	Tools Used
+Backend	Flask, Python, SQLAlchemy
+Frontend	HTML, CSS, Bootstrap, Jinja2
+Forms	Flask-WTF
+Database	SQLite
+Deployment	Heroku + Gunicorn
+API Used	The Movie Database (TMDB) API
+
+
+ 🔧 Technology Stack:
+Layer	Tools Used
+Backend	Flask, Python, SQLAlchemy
+Frontend	HTML, CSS, Bootstrap, Jinja2
+Forms	Flask-WTF
+Database	SQLite
+Deployment	Heroku + Gunicorn
+API Used	The Movie Database (TMDB) API
+
+🔗 API Integration:
+The TMDB API allows users to fetch accurate and rich movie metadata like title, poster, release date, and overview using a simple search term. This enhances the user experience and ensures accurate movie selection.
+
+
+🗃️ Database Design (SQLite):
+The application uses a single table called Movie with the following fields:
+
+ID (Primary Key)
+
+Movie Title
+
+Release Date
+
+Movie ID (from TMDB)
+
+Description
+
+Poster URL
+
+Rating
+
+Review
+
+
+📋 Functional Modules:
+Homepage:
+
+Displays all movies added to the database.
+
+Includes options to update or delete movies.
+
+Search & Add Movie:
+
+Allows the user to search for a movie.
+
+Displays a list of matching results from TMDB.
+
+User can select and add to their personal list.
+
+Update Movie:
+
+Provides a form to add or edit ratings and reviews.
+
+Delete Movie:
+
+Removes a movie from the local database.
+
+🧪 Testing & Validation:
+Manual validation of data inputs using WTForms.
+
+Tested under different screen sizes for responsive design.
+
+Verified API responses using the requests module.
+
+
+🚀 Deployment on Heroku (Summary):
+The project is deployed to Heroku using:
+
+requirements.txt to install necessary libraries.
+
+Procfile to run the app using Gunicorn.
+
+The SQLite database is used locally and deployed as part of the build.
+
+Heroku CLI was used to initialize and push the app from a Git-based workflow.
+
+📈 Future Enhancements:
+Add user authentication (login/signup)
+
+Add star-rating UI widgets
+
+Enable movie sorting and filtering by genre
+
+Add visual analytics for reviews and ratings
+
+📚 Conclusion:
+This project demonstrates a complete cycle of a modern web application — integrating RESTful APIs, form-based user interaction, database management, and cloud deployment. It serves as a solid foundation for anyone aiming to build AI-enhanced or data-driven web platforms.
